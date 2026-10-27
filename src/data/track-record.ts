@@ -180,26 +180,6 @@ export const contributions: Contribution[] = [
     ],
   },
   {
-    id: 'arise-plus',
-    organisation: 'ARISE Plus Malaysia',
-    period: '2023',
-    logo: '/assets/partners/arise-plus.png',
-    points: [
-      'Invited to the “Malaysia: Trade Related Technical Assistance Project 2023” and its Public-Private Dialogue on “Regulatory Reforms to Support Digital MSMEs”.',
-      'The project is funded by the EU and implemented by the International Trade Centre (ITC) with the Ministry of Investment, Trade and Industry (MITI).',
-      'Helped Malaysian digital and e-commerce MSMEs identify and discuss with regulators the legal hurdles they face in daily operations.',
-    ],
-  },
-  {
-    id: 'eac',
-    organisation: 'Economic Action Council: MyMUDAH',
-    logo: '/assets/partners/mymudah.png',
-    points: [
-      'Invited to attend the Kedah State-level MyMUDAH conference chaired by the Prime Minister.',
-      'Contributed to the establishment of MyMUDAH units in all government institutions and business associations to improve the business regulatory environment and boost national productivity and competitiveness.',
-    ],
-  },
-  {
     id: 'matrade',
     organisation: 'MATRADE',
     logo: '/assets/partners/matrade-logo.png',
@@ -250,6 +230,43 @@ export const leadershipContributions: Contribution[] = [
       'Invited as a mentor for startups in a series of intense, hands-on entrepreneurship and technology trainings designed to sensitise nascent startups to the basics of business.',
     ],
   },
+  {
+    id: 'arise-plus',
+    organisation: 'ARISE Plus Malaysia',
+    period: '2023',
+    logo: '/assets/partners/arise-plus.png',
+    points: [
+      'Invited to the “Malaysia: Trade Related Technical Assistance Project 2023” and its Public-Private Dialogue on “Regulatory Reforms to Support Digital MSMEs”.',
+      'The project is funded by the EU and implemented by the International Trade Centre (ITC) with the Ministry of Investment, Trade and Industry (MITI).',
+      'Helped Malaysian digital and e-commerce MSMEs identify and discuss with regulators the legal hurdles they face in daily operations.',
+    ],
+  },
+  {
+    id: 'eac',
+    organisation: 'Economic Action Council: MyMUDAH',
+    logo: '/assets/partners/mymudah.png',
+    points: [
+      'Invited to attend the Kedah State-level MyMUDAH conference chaired by the Prime Minister.',
+      'Contributed to the establishment of MyMUDAH units in all government institutions and business associations to improve the business regulatory environment and boost national productivity and competitiveness.',
+    ],
+  },
+  {
+    id: 'talentcorp',
+    organisation: 'TalentCorp',
+    period: '27 Sept 2022',
+    points: [
+      'Invited to the Industry-Academia Collaboration (IAC) Workshop on Information and Communications Technology.',
+    ],
+  },
+  {
+    id: 'matrade-perak',
+    organisation: 'MATRADE',
+    period: 'Benchmarking Programme',
+    logo: '/assets/partners/matrade-logo.png',
+    points: [
+      'Met Mr. Kenny Lim (Executive Director of Spritzer) and Mr. Ferdaus Md Taib (Director of Century Greentech Co.) during the MATRADE MTC-MSME Perak Benchmarking Programme.',
+    ],
+  },
 ];
 
 /** Slides 10, 12, 29: recognitions and memberships. */
@@ -259,12 +276,6 @@ export const recognitions = [
     title: 'FutureLab mentor',
     detail: 'Appointed as a mentor on FutureLab, the 2022 Best E-Brand of the Year in Mentoring and Education.',
     year: '2022',
-  },
-  {
-    id: 'talentcorp',
-    title: 'TalentCorp IAC Workshop',
-    detail: 'Invited to the Industry-Academia Collaboration (IAC) Workshop on Information and Communications Technology.',
-    year: '27 Sept 2022',
   },
   {
     id: 'prpsm',
@@ -286,14 +297,6 @@ export interface Engagement {
 }
 
 export const engagements: Engagement[] = [
-  {
-    id: 'matrade-perak',
-    title: 'MATRADE MTC-MSME Perak Benchmarking Programme',
-    detail:
-      'Met Mr. Kenny Lim (Executive Director of Spritzer) and Mr. Ferdaus Md Taib (Director of Century Greentech Co.) during the benchmarking programme.',
-    image: '/assets/photos/matrade-perak-benchmarking.jpg',
-    imageAlt: 'Korporatly Group COO Ganesh Kumar Manokara with business leaders at the MATRADE MTC-MSME Perak Benchmarking Programme',
-  },
   {
     id: 'selectusa',
     title: 'SelectUSA',
