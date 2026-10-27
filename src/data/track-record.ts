@@ -15,13 +15,22 @@ export interface Project {
 }
 
 export const highlightStats = [
-  { value: '800,000+', label: 'Malaysians reached through the national AI skilling ecosystem (AINSI)' },
   { value: '30+', label: 'Chief Digital Officers of public universities briefed on AI transformation' },
   { value: '70+', label: 'Government agencies and agricultural entrepreneurs trained in AI' },
   { value: '50', label: 'B40 and M40 business owners trained in digital marketing with MITRA' },
 ] as const;
 
-/** Slides 13–18, 26, 35 */
+/**
+ * Leadership Track: National ecosystem contributions and individual leadership achievements.
+ */
+export const leadershipStats = [
+  { value: '800,000+', label: 'Malaysians reached via national AI ecosystem programs (including Microsoft AINSI) supported by leadership' },
+  { value: '30+', label: 'Chief Digital Officers briefed on higher-education AI transformation' },
+  { value: '3+', label: 'Federal ministerial & national council appointments and advisory inputs' },
+  { value: 'Global', label: 'Cross-border mentorship and multilateral engagements (UN, UNESCO, AIC RAISE)' },
+] as const;
+
+/** Corporate capability-building projects delivered by the company practice. */
 export const projects: Project[] = [
   {
     id: 'mohe-cdo-briefing',
@@ -33,18 +42,6 @@ export const projects: Project[] = [
     image: '/assets/photos/mohe-cdo-briefing.jpeg',
     imageAlt: 'Online briefing on AI transformation for Chief Digital Officers of Malaysia’s public universities',
     stat: '30+ Chief Digital Officers',
-    home: true,
-  },
-  {
-    id: 'ainsi',
-    title: 'National AI Skilling Initiative (AINSI)',
-    organisation: 'Parliament of Malaysia & national ecosystem',
-    category: 'National AI Initiative',
-    summary:
-      'Advancing the national AI skilling agenda with government, education and industry leaders. Our leadership’s ecosystem-wide efforts under Microsoft Malaysia’s AI National Skilling Initiative contributed to equipping 800,000+ Malaysians with AI skills across ministries, agencies, education institutions, industry and communities.',
-    image: '/assets/photos/parliament-ai-skilling.jpeg',
-    imageAlt: 'Leaders at the Parliament of Malaysia event on the national AI skilling agenda',
-    stat: '800,000+ Malaysians reached',
     home: true,
   },
   {
@@ -116,16 +113,7 @@ export const projects: Project[] = [
       'Delivered first-time employment readiness training for local universities and private colleges.',
     image: '/assets/photos/staging-university-workshop.jpg',
     imageAlt: 'University workshop session on employment readiness',
-  },
-  {
-    id: 'aic-raise',
-    title: 'Business incubation mentorship',
-    organisation: 'AIC RAISE, supported by the Government of India (Atal Innovation Mission)',
-    category: 'International Incubation',
-    summary:
-      'Our COO, Ganesh Kumar Manokara, mentored startups in the business incubation programme organised by the Government of India, leading mentor-led sessions on market research and customer development (Tech Catalyst Pre-Incubation Programme 2024) and on product-market fit.',
-    image: '/assets/photos/aic-raise-mentor-session.jpg',
-    imageAlt: 'AIC RAISE Tech Catalyst session poster featuring Ganesh Kumar Manokara as resource person',
+    home: true,
   },
   {
     id: 'satu-sekolah-satu-industri',
@@ -136,6 +124,35 @@ export const projects: Project[] = [
       'Educational and community partnership in Malaysia where local industries adopt, partner with, or intervene in specific schools.',
     image: '/assets/photos/satu-sekolah-satu-industri.jpg',
     imageAlt: 'Group photo at the Satu Sekolah Satu Industri session organised with TalentCorp',
+  },
+];
+
+/**
+ * Our Leadership Track: Individual appointments, advisory contributions, and prior ecosystem roles.
+ * Parked separately to clearly distinguish executive background from corporate deliverables.
+ */
+export const leadershipTrackProjects: Project[] = [
+  {
+    id: 'ainsi',
+    title: 'National AI Skilling Initiative (AINSI)',
+    organisation: 'Microsoft Malaysia Ecosystem & Parliament of Malaysia',
+    category: 'Leadership Ecosystem Contribution',
+    summary:
+      'Advancing national AI capability with government, education and industry leaders. As an active contributor within Microsoft Malaysia’s broader AI National Skilling Initiative ecosystem, our leadership supported nationwide skilling efforts that reached over 800,000 Malaysians across ministries, academic institutions and communities.',
+    image: '/assets/photos/parliament-ai-skilling.jpeg',
+    imageAlt: 'Leaders at the Parliament of Malaysia event on the national AI skilling agenda',
+    stat: '800,000+ ecosystem reach',
+  },
+  {
+    id: 'aic-raise',
+    title: 'Business incubation mentorship',
+    organisation: 'AIC RAISE, supported by the Government of India (Atal Innovation Mission)',
+    category: 'Executive Mentorship & Incubation',
+    summary:
+      'Our COO, Ganesh Kumar Manokara, served as a mentor for startups in the incubation programme supported by the Government of India, conducting masterclasses on market research, customer development (Tech Catalyst Pre-Incubation Programme 2024), and product-market fit.',
+    image: '/assets/photos/aic-raise-mentor-session.jpg',
+    imageAlt: 'AIC RAISE Tech Catalyst session poster featuring Ganesh Kumar Manokara as resource person',
+    stat: 'Startup mentorship',
   },
 ];
 
@@ -163,15 +180,6 @@ export const contributions: Contribution[] = [
     ],
   },
   {
-    id: 'mpc',
-    organisation: 'Malaysia Productivity Corporation (MPC)',
-    logo: '/assets/partners/mpc-trim.png',
-    points: [
-      'Appointed Digital Transformation Partner and Digital Solution Provider; our COO serves as a member of the Digitalization Committee.',
-      'Invited to contribute to initiative 2.1.6 under the National Anti-Corruption Plan (NACP): establishing a strong and effective mechanism for issuing permits and licences.',
-    ],
-  },
-  {
     id: 'arise-plus',
     organisation: 'ARISE Plus Malaysia',
     period: '2023',
@@ -180,24 +188,6 @@ export const contributions: Contribution[] = [
       'Invited to the “Malaysia: Trade Related Technical Assistance Project 2023” and its Public-Private Dialogue on “Regulatory Reforms to Support Digital MSMEs”.',
       'The project is funded by the EU and implemented by the International Trade Centre (ITC) with the Ministry of Investment, Trade and Industry (MITI).',
       'Helped Malaysian digital and e-commerce MSMEs identify and discuss with regulators the legal hurdles they face in daily operations.',
-    ],
-  },
-  {
-    id: 'mosti',
-    organisation: 'Ministry of Science and Technology (TPM)',
-    period: '2017',
-    logo: '/assets/partners/mosti-trim.png',
-    points: [
-      'Invited to contribute to strategic development by designing and implementing a comprehensive Entrepreneur Incubation Programme, serving as mentor for startups.',
-    ],
-  },
-  {
-    id: 'mof',
-    organisation: 'Ministry of Finance: 1Met Boot Camp',
-    period: '2016',
-    logo: '/assets/partners/mof.png',
-    points: [
-      'Invited as a mentor for startups in a series of intense, hands-on entrepreneurship and technology trainings designed to sensitise nascent startups to the basics of business.',
     ],
   },
   {
@@ -225,6 +215,39 @@ export const contributions: Contribution[] = [
     points: [
       'Part of 10X1000 Tech for Inclusion, which aims to enable every learner to drive digital economic growth.',
       'Fintech Foundation Programme alumni (2021).',
+    ],
+  },
+];
+
+/**
+ * Leadership Track: National advisory appointments, council memberships, and startup mentorships.
+ */
+export const leadershipContributions: Contribution[] = [
+  {
+    id: 'mpc',
+    organisation: 'Malaysia Productivity Corporation (MPC)',
+    logo: '/assets/partners/mpc-trim.png',
+    points: [
+      'Our COO serves as a member of the Digitalization Committee; appointed Digital Transformation Partner and Digital Solution Provider.',
+      'Invited to contribute to initiative 2.1.6 under the National Anti-Corruption Plan (NACP): establishing a strong and effective mechanism for issuing permits and licences.',
+    ],
+  },
+  {
+    id: 'mosti',
+    organisation: 'Ministry of Science and Technology (TPM)',
+    period: '2017',
+    logo: '/assets/partners/mosti-trim.png',
+    points: [
+      'Invited to contribute to strategic development by designing and implementing a comprehensive Entrepreneur Incubation Programme, serving as mentor for startups.',
+    ],
+  },
+  {
+    id: 'mof',
+    organisation: 'Ministry of Finance: 1Met Boot Camp',
+    period: '2016',
+    logo: '/assets/partners/mof.png',
+    points: [
+      'Invited as a mentor for startups in a series of intense, hands-on entrepreneurship and technology trainings designed to sensitise nascent startups to the basics of business.',
     ],
   },
 ];

@@ -12,6 +12,9 @@ import {
   ecosystemPartners,
   engagements,
   highlightStats,
+  leadershipContributions,
+  leadershipStats,
+  leadershipTrackProjects,
   mediaPartner,
   projects,
   recognitions,
@@ -35,7 +38,7 @@ const recognitionIcons = { futurelab: Award, talentcorp: Users2, prpsm: BadgeChe
   <!-- Headline numbers -->
   <section class="py-12 bg-white border-b border-brand-border">
     <div class="container-custom">
-      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <dl class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
         {highlightStats.map((stat) => (
           <div class="p-5 sm:p-6 rounded-2xl bg-brand-light border border-brand-border">
             <dt class="text-3xl sm:text-4xl font-extrabold text-brand-sage tracking-tight">{stat.value}</dt>
@@ -155,8 +158,88 @@ const recognitionIcons = { futurelab: Award, talentcorp: Users2, prpsm: BadgeChe
     </div>
   </section>
 
+  <!-- Our Leadership Track -->
+  <section class="py-20 bg-brand-light border-b border-brand-border" id="leadership-track">
+    <div class="container-custom">
+      <div class="max-w-3xl mb-12">
+        <p class="text-xs font-extrabold uppercase tracking-widest text-brand-sage mb-2">Executive Heritage & Advisory</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">Our Leadership Track</h2>
+        <p class="text-sm sm:text-base text-brand-muted mt-2 leading-relaxed">
+          In addition to corporate-delivered programmes, our executive leadership brings a track record of national advisory appointments, startup mentorships, and ecosystem contributions across public-sector and global initiatives.
+        </p>
+      </div>
+
+      <!-- Leadership Highlight Stats -->
+      <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
+        {leadershipStats.map((stat) => (
+          <div class="p-5 sm:p-6 rounded-2xl bg-white border border-brand-border shadow-xs">
+            <dt class="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">{stat.value}</dt>
+            <dd class="mt-2 text-xs text-brand-muted leading-snug">{stat.label}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <!-- Leadership Initiatives & Ecosystem Mentorship Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {leadershipTrackProjects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            organisation={project.organisation}
+            category={project.category}
+            summary={project.summary}
+            image={project.image}
+            imageAlt={project.imageAlt}
+            stat={project.stat}
+          />
+        ))}
+      </div>
+
+      <!-- Leadership Advisory Appointments & Prior Mentorships -->
+      <div class="pt-8 border-t border-brand-border/70">
+        <h3 class="text-sm font-extrabold uppercase tracking-widest text-brand-sage mb-6">Advisory appointments & ecosystem mentorship</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {leadershipContributions.map((item) => (
+            <div class="bg-white rounded-2xl border border-brand-border p-6 flex flex-col gap-4 shadow-xs">
+              <div class="flex items-center justify-between gap-4">
+                <div class="h-12 flex items-center">
+                  {item.logo ? (
+                    <img
+                      src={item.logo}
+                      alt={`${item.organisation} logo`}
+                      class="max-h-10 max-w-[150px] w-auto object-contain mix-blend-multiply"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <span class="w-10 h-10 rounded-xl bg-brand-light border border-brand-border text-brand-sage flex items-center justify-center">
+                      <Landmark class="w-5 h-5" aria-hidden="true" />
+                    </span>
+                  )}
+                </div>
+                {item.period && (
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-brand-light border border-brand-border text-brand-dark shrink-0">
+                    {item.period}
+                  </span>
+                )}
+              </div>
+              <h4 class="text-base font-bold text-brand-dark leading-snug">{item.organisation}</h4>
+              <ul class="space-y-2">
+                {item.points.map((point) => (
+                  <li class="flex items-start gap-2 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                    <CheckCircle2 class="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Engagements -->
-  <section class="py-20 bg-brand-light border-b border-brand-border" id="engagements">
+  <section class="py-20 bg-white border-b border-brand-border" id="engagements">
     <div class="container-custom">
       <SectionHeader
         eyebrow="Engagements"
@@ -201,7 +284,7 @@ const recognitionIcons = { futurelab: Award, talentcorp: Users2, prpsm: BadgeChe
   </section>
 
   <!-- Ecosystem partners -->
-  <section class="py-20 bg-white border-b border-brand-border" id="ecosystem">
+  <section class="py-20 bg-brand-light border-b border-brand-border" id="ecosystem">
     <div class="container-custom">
       <SectionHeader
         eyebrow="Our Ecosystem"
@@ -232,7 +315,7 @@ const recognitionIcons = { futurelab: Award, talentcorp: Users2, prpsm: BadgeChe
   </section>
 
   <!-- Media agency partner -->
-  <section class="py-20 bg-brand-light border-b border-brand-border" id="media-partner">
+  <section class="py-20 bg-white border-b border-brand-border" id="media-partner">
     <div class="container-custom">
       <SectionHeader
         eyebrow="Media & Technology Partners"
